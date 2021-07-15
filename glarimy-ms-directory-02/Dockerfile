@@ -1,5 +1,5 @@
 FROM maven:3.6.3-jdk-8-slim AS build
-COPY src /use/glarimy/src
+COPY src /usr/glarimy/src
 COPY pom.xml /usr/glarimy/pom.xml
 RUN mvn -f /usr/glarimy/ clean install -DskipTests=true
 
